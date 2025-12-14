@@ -4,6 +4,7 @@
 #include "magician.h"
 #include "thief.h"
 #include "archer.h"
+#include "monster.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int main() {
     string nickname;
 
     Player* player = nullptr;
+    Monster* monster = new Monster("goblin");
 
     cout << "* 닉네임을 입력해주세요: ";
     cin >> nickname;
@@ -46,10 +48,11 @@ int main() {
         return 1;
     }
 
-    player->attack();
+    player->attack(monster);
     player->printPlayerStatus();
 
     delete player;
+    delete monster;
 
     return 0;
 }

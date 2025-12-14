@@ -36,10 +36,10 @@ int Player::getDefence() { return defence; }
 int Player::getAccuracy() { return accuracy; }
 int Player::getSpeed() { return speed; }
 
-void Player::setNickname(string nickname) { Player::nickname = nickname; }
-bool Player::setHP(int HP) { Player::HP = HP; return true; }
-bool Player::setMP(int MP) { Player::MP = MP; return true; }
-void Player::setPower(int power) { Player::power = power; }
-void Player::setDefence(int defence) { Player::defence = defence; }
-void Player::setAccuracy(int accuracy) { Player::accuracy = accuracy; }
-void Player::setSpeed(int speed) { Player::speed = speed; }
+void Player::setNickname(string nickname) { this->nickname = nickname; }
+bool Player::setHP(int HP) { this->HP = HP; if (HP > 0) return true; else { this->HP = 0; return false; } }
+bool Player::setMP(int MP) { this->MP = MP; if (MP > 0) return true; else { this->MP = 0; return false; } }
+void Player::setPower(int power) { this->power = power; }
+void Player::setDefence(int defence) { this->defence = defence; }
+void Player::setAccuracy(int accuracy) { this->accuracy = accuracy; }
+void Player::setSpeed(int speed) { this->speed = speed; }

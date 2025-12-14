@@ -1,9 +1,9 @@
 #pragma once
 #include "Player.h"
 
-class Warrior : public Player {  // Player .Å¬·¡½º »ó¼Ó
+class Warrior : public Player {  // Player .í´ë˜ìŠ¤ ìƒì†
 public:
-	Warrior(string nickname);  // Àü»ç »ı¼ºÀÚ
-	void attack() override;  // °ø°İ ÇÔ¼ö »ó¼Ó
+	Warrior(string nickname);  // ì „ì‚¬ ìƒì„±ì
+	void attack() override;  // ê³µê²© í•¨ìˆ˜ ìƒì†
+	void attack(Monster* monster) override;  // ê³µê²© í•¨ìˆ˜ ìƒì†
 };
-

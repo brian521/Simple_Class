@@ -2,14 +2,17 @@
 #include <string>
 using namespace std;
 
+class Monster;
+
 class Player {
 public:
-    Player(string nickname);  // »ı¼ºÀÚ
+    Player(string nickname);  // ìƒì„±ì
 
-    virtual void attack() = 0;  // ¼ø¼ö °¡»ó ÇÔ¼ö
-    void printPlayerStatus();  // ½ºÅÈ Ãâ·Â
+    virtual void attack() = 0;  // ìˆœìˆ˜ ê°€ìƒ í•¨ìˆ˜
+    virtual void attack(Monster* monster) = 0;
+    void printPlayerStatus();  // ìŠ¤íƒ¯ ì¶œë ¥
 
-    // getter ÇÔ¼ö
+    // getter í•¨ìˆ˜
     string getJobName();
     string getNickname();
     int getLevel();
@@ -20,7 +23,7 @@ public:
     int getAccuracy();
     int getSpeed();
 
-    // setter ÇÔ¼ö
+    // setter í•¨ìˆ˜
     void setNickname(string nickname);
     bool setHP(int HP);
     bool setMP(int MP);
