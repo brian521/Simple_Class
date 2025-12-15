@@ -14,7 +14,7 @@ int main() {
     string nickname;
 
     Player* player = nullptr;
-    Monster* monster = new Monster("goblin");
+    Monster* monster = new Monster("Goblin");  // 고블린 몬스터 생성
 
     cout << "* 닉네임을 입력해주세요: ";
     cin >> nickname;
@@ -48,7 +48,7 @@ int main() {
         return 1;
     }
 
-    player->attack(monster);
+    player->attack(monster);  // 플레이어가 몬스터 공격
     player->printPlayerStatus();
 
     delete player;
